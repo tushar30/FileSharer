@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Share File" icon-name="action:share_file">
+        <div class="c-container">
+            <lightning-layout vertical-align="stretch" multiple-rows="true" class="x-large">
+                <lightning-layout-item size="7">
+                     <lightning-input type="text" label="Record Id:"  name="recordId" value={recordId} onchange={genericOnChange} required></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item size="5">
+                    <lightning-combobox
+                            name="shareType"
+                            label="Status"
+                            value={shareType}
+                            placeholder="Select Share Type"
+                            options={options}
+                            onchange={genericOnChange} required></lightning-combobox>
+               </lightning-layout-item>
+                <lightning-layout-item size="8">
+                    <lightning-button variant="brand" label="Share File" title="Share File" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+                </lightning-layout-item>
+            </lightning-layout>
+        </div>
+    </lightning-card>
+</template>

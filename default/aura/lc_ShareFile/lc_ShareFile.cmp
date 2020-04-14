@@ -1,0 +1,10 @@
+<aura:component implements = "force:lightningQuickAction" >
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+    <lightning:notificationsLibrary aura:id="notifLib"/>
+    
+    <aura:attribute name="fileId" type="String" />
+    <aura:attribute name="urlStart" type="String" default="/lightning/r/ContentDocument/"/>
+    <aura:attribute name="urlEnd" type="String" default="/view"/>
+
+	<c:lwc_ShareFile fileId="{!v.fileId}" onclose="{!c.closeQA}"/>
+</aura:component>	
